@@ -1,0 +1,2 @@
+En postman estoy probando por POST, en el body envio
+la accion, sabor, tipo, cantidad, imagen, mailUsuario y numeroPedido
