@@ -1,0 +1,2 @@
+En el postman mando por get. saborFiltro, inicio, usuarioFiltro, final y fecha
+las fechas en formato aaaa/mm/dd
