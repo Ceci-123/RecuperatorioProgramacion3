@@ -1,0 +1,2 @@
+por post en form-data, le pongo numeroPedido, causa, imagen y accion devolucion, 
+el de delete, lo paso en x_www-form-urlencoded solo numeroDePedido
