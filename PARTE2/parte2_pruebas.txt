@@ -1,2 +1,4 @@
 En el postman mando por get. saborFiltro, inicio, usuarioFiltro, final y fecha
 las fechas en formato aaaa/mm/dd
+
+En la parte de put, uso x-www-form-urlencoded, numeroDePedido, mailUsuario, sabor, tipo, cantidad

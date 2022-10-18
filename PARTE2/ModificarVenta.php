@@ -6,7 +6,15 @@ include_once "Venta.php";
 $listaDeVentas = array();
 $listaDeJSON = ManejoJSON::LeerListaJSON("Ventas.json");
 
-$datos = json_decode(file_get_contents("php://input"), true);
+
+parse_str(file_get_contents("php://input"), $post_vars);
+
+$auxMail = $post_vars["mailUsuario"];
+$auxSabor = $post_vars["sabor"];
+$auxTipo = $post_vars["tipo"];
+$auxCantidad = $post_vars["cantidad"];
+$auxPedido = $post_vars["numeroDePedido"];
+
 
 if($listaDeJSON!=null &&count($listaDeJSON)>0)
 {
@@ -18,16 +26,14 @@ if($listaDeJSON!=null &&count($listaDeJSON)>0)
         array_push($listaDeVentas,$ventaAuxiliar);
     }
 }
-
 foreach ($listaDeVentas as $venta ) {
-    if(strcmp($venta->numeroDePedido,$datos["numeroDePedido"])==0 &&
-    strcmp($venta->mailUsuario,$datos["mailUsuario"])==0 )
+    if($venta->numeroDePedido == $auxPedido && $venta->mailUsuario ==$auxMail)
     {
         echo "Antes de cambiar\n";
         $venta->Mostrar();
-        $venta->sabor = $datos["sabor"];
-        $venta->tipo = $datos["tipo"];
-        $venta->cantidad = $datos["cantidad"];
+        $venta->sabor = $auxSabor;
+        $venta->tipo = $auxTipo;
+        $venta->cantidad = $auxCantidad;
         echo "Se modificó la venta\n";
         $venta->Mostrar();
     }
