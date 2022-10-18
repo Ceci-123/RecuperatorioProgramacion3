@@ -1,0 +1,14 @@
+[
+    {
+        "idPedido": 22,
+        "id": 101,
+        "porcentajeDescuento": 10,
+        "usado": false
+    },
+    {
+        "idPedido": 22,
+        "id": 102,
+        "porcentajeDescuento": 10,
+        "usado": false
+    }
+]
