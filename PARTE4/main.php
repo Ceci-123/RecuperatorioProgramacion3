@@ -19,8 +19,16 @@ switch ($_SERVER["REQUEST_METHOD"]) {
                     break;
         }
     case "GET":
-        include_once "ConsultasVentas.php";
-        break;
+        switch ($_POST["accion"]) {
+            case 'ventas':
+                include_once "ConsultasVentas.php";
+                # code...
+                break;
+            
+            case "cupones":
+                include_once "ConsultasDevoluciones.php";
+                break;
+        }
     case "PUT":
         include_once "ModificarVenta.php";
         break;

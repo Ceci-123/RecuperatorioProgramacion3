@@ -18,11 +18,7 @@ $listaDeJSON = ManejoJSON::LeerListaJSON("heladeria.json");
 
 if ($listaDeJSON != null && count($listaDeJSON) > 0) {
     foreach ($listaDeJSON as $heladoJson) {
-        /*   $tipo = 0;
-        if(strcmp($heladoJson["tipo"],"crema")==0)
-        {
-            $tipo = 1;
-        } */
+      
         $heladoAuxiliar = new Helado(
             $heladoJson["id"],
             $heladoJson["sabor"],
@@ -33,6 +29,7 @@ if ($listaDeJSON != null && count($listaDeJSON) > 0) {
         array_push($listaDeHelados, $heladoAuxiliar);
     }
 }
+
 $listaDeJSON = ManejoJSON::LeerListaJSON("Ventas.json");
 if ($listaDeJSON != null && count($listaDeJSON) > 0) {
     foreach ($listaDeJSON as $ventaJson) {

@@ -22,7 +22,7 @@ if ($listaDeJSON != null && count($listaDeJSON) > 0) {
 }
 
 if (Operaciones::BuscarHelado($listaDeHelados, $_POST["sabor"], $_POST["tipo"]) == null) {
-    echo "El helado no existe y lo vamos a crear\n";
+    echo "El helado no existe crear helado\n";
     $heladoNuevo = CrearHelado($listaDeHelados, $_POST["sabor"], $_POST["precio"], $_POST["tipo"], $_POST["cantidad"]);
     if ($heladoNuevo == null) {
         echo "No se pudo cargar el helado, verificar los datos\n";

@@ -6,13 +6,8 @@ include_once "Venta.php";
 $listaDeVentas = array();
 $listaDeJSON = ManejoJSON::LeerListaJSON("Ventas.json");
 
-//$datos = json_decode(file_get_contents("php://input"), true);
 parse_str(file_get_contents("php://input"), $post_vars);
 
-/* $auxMail = $post_vars["mailUsuario"];
-$auxSabor = $post_vars["sabor"];
-$auxTipo = $post_vars["tipo"];
-$auxCantidad = $post_vars["cantidad"]; */
 $auxPedido = $post_vars["numeroDePedido"];
 
 if($listaDeJSON!=null &&count($listaDeJSON)>0)

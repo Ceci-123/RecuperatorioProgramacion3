@@ -15,6 +15,11 @@ class Descuento{
         $this->porcentajeDescuento = $porcentajeDescuento; 
         $this->usado = $usado;
     }
+
+    public function Mostrar()
+    {
+        echo "$this->idPedido,$this->id,$this->porcentajeDescuento,$this->usado";
+    }
 }
 
 ?>
